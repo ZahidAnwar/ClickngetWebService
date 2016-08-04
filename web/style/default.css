@@ -1,0 +1,526 @@
+/*
+
+        terrafirma1.0 by nodethirtythree design
+        http://www.nodethirtythree.com
+
+*/
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+body
+{
+    background: #F9F9F7 url('images/a1.gif') repeat-x;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    color: #8C8C73;
+}
+.questionText {
+    color: #000000;
+    font: medium/1.4 Tahoma,sans-serif;
+    text-decoration: none;
+}
+.questionText {
+    color: #000000;
+    font: medium/1.4 Arial,sans-serif;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+#pageTitle {
+    margin: 0 auto;
+}
+#pageTitle p{
+    text-align: center;
+    color: #00858B;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.questionTextEdit {
+    color: #000000;
+    font: medium/1.4 Tahoma,sans-serif;
+    text-decoration: none;
+}
+.questionTextEdit {
+    color: #000000;
+    font: medium/1.4 Arial,sans-serif;
+    text-decoration: none;
+
+}
+.qLabel{
+    padding-bottom: 2px;
+}
+
+.questionAnswer
+{
+    color: #000000;
+    font: small/1.5 Tahoma,sans-serif;
+}
+
+.otherMove{
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.smallTextBox
+{
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.editTextBox{
+    width: 80px;
+    border: 1px #000 solid;
+}
+
+.txtRight{
+    float:right;
+}
+
+.answerWithNoText{
+    padding-top: 20px;
+    color: #000000;
+    font: small/1.5 Tahoma,sans-serif;
+    text-decoration: none;
+}
+
+.textArea{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.labelRadio{
+    padding-left: 5px;
+}
+
+
+.editDelete{
+ padding: 4px;
+}
+
+a
+{
+    color: #FF7800;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #000;
+    text-decoration: underline;
+}
+
+p
+{
+    margin-bottom: 14px;
+    text-align: justify;
+}
+#homepge{
+    padding-top: 20px;
+    margin: 0 auto;
+}
+#homepge h1 {
+    color: #333333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#homepge h1 {
+    padding-top: 20px;
+}
+
+#homepge table th {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #94938C;
+    border-color: #FFFFFF #FFFFFF #FFFFFF -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 28px;
+    padding-left: 10px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#homepge table td {
+    border-bottom: 1px solid #FFFFFF;
+    font-size: 12px;
+    padding: 9px 10px;
+    vertical-align: top;
+}
+
+.tdClass
+{
+    background-color:  #EAEAE8;
+}
+
+#activity a
+{
+    font-size: 14px;
+    font-weight: bold;
+    color: #00858B;
+    text-decoration: none;
+}
+#activity a:hover
+{
+    text-decoration: underline;
+}
+.created{
+    padding-top: 2px;
+    color: #666666;
+    font-size: 11px;
+}
+
+#action ul{
+    position: relative;
+}
+
+#action ul, ol, li {
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#addhideInputBox{
+    padding-top: 10px;
+    padding-left: 60px;   
+}
+
+#hideInputBox{
+    padding-top: 10px;
+    padding-left: 100px;
+}
+.addTitle
+{
+    font-size: 0.75em;
+    padding: 4px 10px 0 5px;
+}
+.title
+{
+    font-size: 0.75em;
+    padding: 4px 10px 0 5px;
+}
+.category
+{
+    font-size: 0.75em;
+    padding: 4px 10px 0 5px;
+}
+
+#inputCreateTitle
+{
+    margin-left: 29px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+#inputCreateSubTitle{
+    margin-left: 5px;
+    width: 300px; 
+    margin-bottom: 5px;
+}
+
+.large-label {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1em;
+    padding-left: 5px;
+}
+#action li {
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    width: 50px;
+}
+
+.editBox{
+   width: 286px;
+   border: 2px #CCCCCC dashed;
+   float: right;
+   margin-right: 0;
+   font-size: 12px;
+}
+
+.editBoxNoAns{
+   width: 183px;
+   border: 2px #CCCCCC dashed;
+   float: right;
+   margin-right: 0;
+   font-size: 12px;
+}
+
+#questionTypeEdit
+{
+   width: 440px;
+   border: 2px #fff dashed;
+   margin-left: 10px;
+}
+
+#questionTypeEdit p{
+    margin: 10px;
+    padding-left: 5px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+#questionType
+{
+   width: 220px;
+   border: 2px #fff dashed;
+   margin-left: 10px;
+}
+
+#questionType p{
+    margin: 10px;
+    padding-left: 5px;
+    font-size: 11px;
+    font-weight: bold;
+}
+#newAnswer{
+    width: 500px;
+    padding: 10px;
+}
+
+#newAnswer p{
+    float: right;
+}
+
+
+#answerType
+{
+   width: 300px;
+   border: 2px #fff dashed;
+   float: right;
+   margin-left: 10px;
+   padding-bottom: 5px;
+   padding-top: 5px;
+   margin-bottom: 10px;
+}
+#answerType p{
+    margin: 5px;
+    padding-left: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    
+}
+
+
+#NoTabContentUpdate {
+    border: 0 none;
+    color: #333333;
+    margin: 0 auto;
+    width: 710px;
+}
+#NoTabContentUpdate h1{
+    color: #999999;
+    font-size: 1.875em;
+    margin: 15px 0;
+}
+
+
+#NoTabContent h1{
+    color: #999999;
+    font-size: 1.875em;
+    margin: 15px 0;
+}
+
+#NoTabContent {
+    border: 0 none;
+    color: #333333;
+    margin: 0 auto;
+    width: 980px;
+}
+.errorMess{
+    padding-left: 5px;
+}
+.fieldset {
+
+    padding: 15px 10px 15px 15px;
+    background-color: #EAEBE9;
+}
+fieldset .last{
+    border-top: 1px solid #FFFFFF;
+    padding: 15px 10px 15px 15px;
+    background-color: #EAEBE9;
+}
+fieldset {
+    border: medium none;
+}
+#submitButton{
+    padding: 15px 10px 15px 15px;
+    background-color: #D9D9D4;
+    text-align: right;
+}
+.hdr{
+    background-color: #706F65;
+    border-radius: 3px 3px 0 0;
+    font-weight: bold;
+    margin-bottom: 0;
+    
+}
+.hdr p{
+    color:#fff;
+    padding-top: 10px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+.errorAnswerBlank
+{
+    color: #DF0101;
+    font: small/1.5 Tahoma,sans-serif;
+}
+
+#loginPage{
+    margin-top: 100px;
+    padding-top: 20px;
+    color:#CCCCCC;
+    width: 420px;
+    height: 200px;
+    border: 2px #CCCCCC dashed;
+    -moz-border-radius: 6px;
+    -webkit-border-radius:6px;
+    border-radius: 6px;
+}
+#create{
+    position: relative;
+    background: #4B4A3C url('images/a16.gif') repeat-x;
+    height: 32px;
+}
+
+#create ul
+{
+    position: relative;
+    text-align: right;
+    padding-right: 300px;
+    padding-top: 10px;
+}
+
+#create ul li
+{
+    display: inline;
+    line-height: 2px;
+    padding-left: 3px;
+}
+
+
+#create ul li a
+{
+    background-color: #2B8916;
+    text-decoration: none;
+    color: #fff;
+    padding: 2px;
+    font-size: 14px;
+}
+
+#create ul li a:hover
+{
+    background-color: #5CBF45; 
+    color: #fff;
+    text-decoration: none;
+}
+
+#login
+{
+    position: relative;
+    background: #4B4A3C url('images/a16.gif') repeat-x;
+    height: 30px;
+}
+
+#login ul
+{
+    position: relative;
+    text-align: right;
+    padding-right: 300px;
+    padding-top: 6px;
+}
+
+#login ul li
+{
+    display: inline;
+    line-height: 2px;
+    padding-left: 3px;
+}
+
+#login ul li a
+{
+    background-color: #34332B;
+    text-decoration: none;
+    color: #999999;
+    padding: 2px;
+    font-size: 14px;
+}
+
+#login ul li a:hover
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+#menu
+{
+    position: relative;
+    background: #4B4A3C url('images/a16.gif') repeat-x;
+    height: 40px;
+    margin-top: -10px;
+}
+
+#menu ul
+{
+    position: relative;
+    text-align: center;
+}
+
+#menu ul li
+{
+    display: inline;
+    line-height: 52px;
+    padding-left: 3px;
+}
+
+.current{
+
+    color:#fff;
+}
+
+#menu ul li a
+{
+    background-color: transparent;
+    background-repeat: repeat-x;
+    padding: 8px 12px 8px 12px;
+    font-size: 16px;
+    color: #999999;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#menu ul li a:hover
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+#footer
+{
+    position: relative;
+    clear: both;
+    height: 66px;
+    text-align: center;
+    line-height: 66px;
+    font-size: 10px;
+    background-image: url('images/a50.gif');
+    color: #A8A88D;
+}
+
+#footer a
+{
+    color: #8C8C73;
+}

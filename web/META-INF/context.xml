@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/ClickngetWebservice">
+
+    <Resource auth="ClickngetWebservice" description="MyApp DataSource Reference" 
+          driverClassName="com.mysql.jdbc.Driver" logAbandoned="true" 
+          maxActive="2" maxIdle="1" maxWait="1000" minEvictableIdleTimeMillis="600000" 
+          name="jdbc/SurveyResult" password="mjckn78u" removeAbandoned="true" 
+          removeAbandonedTimeout="10" testWhileIdle="true" timeBetweenEvictionRunsMillis="50000" 
+          type="javax.sql.DataSource" url="jdbc:mysql://192.168.2.99:3306/nutracheck_201208?zeroDateTimeBehavior=convertToNull&amp;jdbcCompliantTruncation=false&amp;useOldAliasMetadataBehavior=true" 
+          username="n1" validationQuery="SELECT 1"/>
+    
+</Context>
+

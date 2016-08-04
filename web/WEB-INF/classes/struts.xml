@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts> 
+    <constant value="false" name="struts.enable.DynamicMethodInvocation"/> 
+    <constant value="true" name="struts.devMode"/> 
+    <package name="default" extends="struts-default" namespace="/"> 
+        <default-action-ref name="index"/>
+        <global-results> 
+            <result name="error">/WEB-INF/src/error/error.jsp</result> 
+        </global-results> 
+        <!--
+       <global-exception-mappings> 
+           <exception-mapping result="error" exception="java.lang.Exception"/> 
+       </global-exception-mappings> 
+        -->
+        <action name="Login">
+            <result>/WEB-INF/src/admin/login.jsp</result>
+        </action>
+        <!--
+        <action name="LoginPost" class="com.nutratech.survey.login.LoginActionClass">
+            <result name="input">/WEB-INF/src/admin/login.jsp</result>
+            <result name="success" type="redirect">/Home</result>
+            <result name="success_accountLocked">/WEB-INF/src/admin/accountLocked.jsp</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action> 
+        
+        <action name="Logout" class="com.nutratech.survey.login.Logout">
+            <result name="success">/WEB-INF/src/admin/login.jsp</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+        <action name="Home" class="com.nutratech.survey.result.ResultActionClass" method="executeHome">
+            <result name="success">/WEB-INF/src/page/home.jsp</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+          
+        <action name="Edit" class="com.nutratech.survey.result.ResultActionClass" method="executeHome">
+            <result name="success">/WEB-INF/src/page/edit.jsp</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+       <action name="SurveyResultStart" class="com.nutratech.survey.result.ResultActionClass" method="execute">
+            <result name="success">/WEB-INF/src/page/download.jsp</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+               
+        <action name="Download" class="com.nutratech.survey.result.ResultActionClass" method="executeDownload">
+            <result name="success" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="inputName">fileInputStream</param>
+                <param name="contentDisposition">attachment;filename="survey_report.txt"</param>
+                <param name="bufferSize">1024</param>
+            </result>
+        </action>
+        
+        <action name="CreateSurvey" class="com.nutratech.survey.result.ResultActionClass" method="executeCreateSurveyTitle">
+            <result>/WEB-INF/src/create/createSurvey.jsp</result>          
+        </action>
+ 
+         <action name="EditQuestionPage" class="com.nutratech.survey.modify.DisplaySurveyDetails" method="execute">
+            <result name="success">/WEB-INF/src/create/display.jsp</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+        <action name="EditQuestion" class="com.nutratech.survey.modify.DisplaySurveyDetails" method="executeDisplay">
+            <result name="input">/WEB-INF/src/create/editQuestion.jsp</result>
+            <result name="success">/WEB-INF/src/create/editQuestion.jsp</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+        <action name="EditAnswer" class="com.nutratech.survey.modify.DisplaySurveyDetails" method="executeDisplayAnswer">
+            <result name="success">/WEB-INF/src/create/editAnswer.jsp</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+
+       
+        <action name="EditQuesFormSubmit" class="com.nutratech.survey.modify.Edit" method="executeUpdateQues">
+             <result name="successEditSurvey" type="redirect">/EditQuestionPage?surID=${surveyID}&amp;questionId=${questionIDLogic}</result>
+             <result name="successAnswerLogic" type="redirect">/EditAnsLogic?mySurveyId=${surveyID}&amp;questionId=${questionIDLogic}</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+      
+        
+        <action name="EditQuesFormSubmit" class="com.nutratech.survey.modify.Edit" method="executeUpdateQues">
+             <result name="success" type="redirect">/EditQuestionPage?surID=${surveyID}</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+        <action name="EditAnsLogic" class="com.nutratech.survey.modify.Edit" method="executeAnsLogic">
+             <result name="success">/WEB-INF/src/create/addLogicAnswer.jsp</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+        <action name="LogicAnsFormSubmit" class="com.nutratech.survey.modify.Edit" method="executeAnsLogicSubmit">
+             <result name="success" type="redirect">/EditQuestion?questionId=${myQId}&amp;surveyId=${mySId}</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+       
+        
+          
+        <action name="RemoveLogic" class="com.nutratech.survey.modify.Delete" method="executeRemoveLogic">
+             <result name="success" type="redirect">/EditQuestion?questionId=${questionId}&amp;surveyId=${surveyId}</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+        
+        
+        
+        <action name="EditAnsFormSubmit" class="com.nutratech.survey.modify.Edit" method="executeUpdateAns">
+             <result name="success" type="redirect">/EditQuestionPage?surID=${surveyID}</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+       <action name="AddNewAnswer" class="com.nutratech.survey.modify.Add" method="execute">
+             <result name="success">/WEB-INF/src/create/addNewAnswer.jsp</result>
+             <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+        <action name="AddNewAnswerFormSubmit" class="com.nutratech.survey.modify.Add" method="executeSubmit">
+             <result name="success" type="redirect">/EditAnswer?questionId=${questionId}</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+        <action name="DeleteAnswer" class="com.nutratech.survey.modify.Delete">
+             <result name="success" type="redirect">/EditAnswer?questionId=${questionId}</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+        <action name="RemoveType" class="com.nutratech.survey.modify.Delete" method="executeRemAnsType">
+             <result name="success" type="redirect">/EditAnswer?questionId=${questionId}</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+        
+        <action name="DeleteQuestion" class="com.nutratech.survey.modify.Delete" method="executeDeleteQuestion">
+            <result name="success" type="redirect">/EditQuestionPage?surID=${surID}</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>  
+        
+        <action name="Cancel" class="com.nutratech.survey.modify.Edit" method="executeCancel">
+             <result name="success" type="redirect">/EditQuestionPage?surID=${cancelSurId}</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+         <action name="EditTitle" class="com.nutratech.survey.modify.DisplaySurveyDetails" method="executeEditTitle">
+            <result name="success">/WEB-INF/src/create/editTitle.jsp</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+        <action name="DeleteSurvey" class="com.nutratech.survey.modify.Delete" method="executeDeleteSurvey">
+            <result name="success" type="redirect">/Edit</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action> 
+        
+        <action name="EditTitleFormSubmit" class="com.nutratech.survey.modify.Edit" method="execute">
+             <result name="success" type="redirect">/EditQuestionPage?surID=${surveyID}</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+
+        <action name="Continue" class="com.nutratech.survey.modify.Add" method="executeContinue">
+             <result name="success">/WEB-INF/src/create/addNewQuestion.jsp</result>
+            <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+        
+         <action name="AddQuestion" class="com.nutratech.survey.modify.Add" method="executePassSurId">
+             <result>/WEB-INF/src/create/addQuestion.jsp</result>
+             <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+        <action name="AddQuestionFormSubmit" class="com.nutratech.survey.modify.Add" method="executeAddQuestion">
+             <result name="success" type="redirect">/EditAnswer?questionId=${answerID}</result>
+             <result name="error">/WEB-INF/src/error/error.jsp</result>
+        </action>
+        
+               <action name="AddNewQuestion" class="com.nutratech.survey.modify.Add" method="executeNewQuestions">
+                     <result name="success" type="redirect">/EditAnswer?questionId=${answerID}</result>
+                    <result name="error">/WEB-INF/src/error/error.jsp</result>
+                </action>
+        -->
+               
+    </package> 
+</struts>
